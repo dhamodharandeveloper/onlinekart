@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineKart - Shop</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        summary {
+            list-style: none;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-stone-100 font-sans text-slate-900">
+
+    <!-- Top bar -->
+    <div class="bg-slate-900 py-2 text-center text-xs text-white">
+        Free shipping on orders above ₹9,999 &nbsp; | &nbsp; New season sale is live
+    </div>
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white shadow">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+
+            <a href="#" class="text-lg font-bold tracking-wide">
+                ONLINE KART
+            </a>
+
+            <div class="hidden items-center gap-6 lg:flex">
+                <a href="#" class="font-semibold text-slate-900">Home</a>
+                <a href="#products" class="text-slate-600 hover:text-slate-900">Shop</a>
+                <a href="#products" class="text-slate-600 hover:text-slate-900">New in</a>
+                <a href="#cart" class="text-slate-600 hover:text-slate-900">Cart</a>
+            </div>
+
+            <div class="hidden items-center gap-3 xl:flex">
+                <input type="search" placeholder="Search products" class="rounded-full border border-slate-300 px-4 py-2 text-sm outline-none">
+                <a href="#cart" class="relative rounded-full border border-slate-900 px-4 py-2 text-sm font-semibold">
+                    Bag
+                    <span class="absolute -right-1 -top-1 rounded-full bg-lime-300 px-2 text-xs font-bold text-slate-900">3</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 xl:hidden">
+                <a href="#cart" class="relative rounded-full border border-slate-900 px-3 py-2 text-sm font-semibold">
+                    Bag
+                    <span class="absolute -right-1 -top-1 rounded-full bg-lime-300 px-2 text-xs font-bold text-slate-900">3</span>
+                </a>
+
+                <details class="relative lg:hidden">
+                    <summary class="cursor-pointer rounded-lg border border-slate-300 px-3 py-2">☰</summary>
+                    <div class="absolute right-0 mt-2 w-44 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
+                        <a href="#" class="block rounded px-3 py-2 hover:bg-stone-100">Home</a>
+                        <a href="#products" class="block rounded px-3 py-2 hover:bg-stone-100">Shop</a>
+                        <a href="#products" class="block rounded px-3 py-2 hover:bg-stone-100">New in</a>
+                        <a href="#cart" class="block rounded px-3 py-2 hover:bg-stone-100">Cart</a>
+                    </div>
+                </details>
+            </div>
+
+        </div>
+    </nav>
+
+    <main id="products" class="mx-auto max-w-7xl px-4 py-10">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-12">
+
+            <!-- Left side: filters and products -->
+            <section class="lg:col-span-9">
+                <h1 class="text-3xl font-bold sm:text-4xl">Objects for every day.</h1>
+                <p class="mt-2 text-slate-600">Simple, useful things chosen for your home and daily routine.</p>
+
+                <!-- Category filter bar -->
+                <div class="my-6 flex flex-wrap gap-2">
+                    <button type="button" class="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white">All</button>
+                    <button type="button" class="rounded-full border border-slate-400 px-4 py-2 text-sm font-semibold text-slate-700">New in</button>
+                    <button type="button" class="rounded-full border border-slate-400 px-4 py-2 text-sm font-semibold text-slate-700">Audio</button>
+                    <button type="button" class="rounded-full border border-slate-400 px-4 py-2 text-sm font-semibold text-slate-700">Tech</button>
+                    <button type="button" class="rounded-full border border-slate-400 px-4 py-2 text-sm font-semibold text-slate-700">Home</button>
+                    <button type="button" class="rounded-full border border-slate-400 px-4 py-2 text-sm font-semibold text-slate-700">Style</button>
+                </div>
+
+                <!-- Product grid -->
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+                    <div class="flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-sm">
+                        <div class="relative">
+                            <img src="images/headphones.jpg" alt="Studio Headphones" class="h-64 w-full object-cover transition-transform duration-300 hover:scale-105">
+                            <span class="absolute left-2 top-2 rounded-full bg-lime-300 px-2 py-1 text-xs font-bold">New</span>
+                        </div>
+                        <div class="flex flex-1 flex-col p-4">
+                            <p class="text-xs font-semibold uppercase text-slate-500">Audio</p>
+                            <h2 class="mt-1 font-semibold">Studio Headphones</h2>
+                            <p class="mt-2 text-lg font-bold">₹15,999 <span class="text-sm font-normal text-slate-400 line-through">₹19,999</span></p>
+                            <button type="button" class="mt-auto w-full rounded-full border border-slate-900 py-2 text-sm font-semibold hover:bg-slate-900 hover:text-white">Add to bag</button>
+                        </div>
+                    </div>
+
+                    <div class="flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-sm">
+                        <div class="relative">
+                            <img src="images/watch.jpg" alt="Meridian Watch" class="h-64 w-full object-cover transition-transform duration-300 hover:scale-105">
+                            <span class="absolute left-2 top-2 rounded-full bg-slate-900 px-2 py-1 text-xs font-bold text-white">Bestseller</span>
+                        </div>
+                        <div class="flex flex-1 flex-col p-4">
+                            <p class="text-xs font-semibold uppercase text-slate-500">Tech</p>
+                            <h2 class="mt-1 font-semibold">Meridian Watch</h2>
+                            <p class="mt-2 text-lg font-bold">₹21,499 <span class="text-sm font-normal text-slate-400 line-through">₹24,999</span></p>
+                            <button type="button" class="mt-auto w-full rounded-full border border-slate-900 py-2 text-sm font-semibold hover:bg-slate-900 hover:text-white">Add to bag</button>
+                        </div>
+                    </div>
+
+                    <div class="flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-sm">
+                        <div class="relative">
+                            <img src="images/sneakers.jpg" alt="Court Low Sneakers" class="h-64 w-full object-cover transition-transform duration-300 hover:scale-105">
+                            <span class="absolute left-2 top-2 rounded-full bg-red-100 px-2 py-1 text-xs font-bold text-red-800">Sale</span>
+                        </div>
+                        <div class="flex flex-1 flex-col p-4">
+                            <p class="text-xs font-semibold uppercase text-slate-500">Style</p>
+                            <h2 class="mt-1 font-semibold">Court Low Sneakers</h2>
+                            <p class="mt-2 text-lg font-bold">₹7,999 <span class="text-sm font-normal text-slate-400 line-through">₹9,999</span></p>
+                            <button type="button" class="mt-auto w-full rounded-full border border-slate-900 py-2 text-sm font-semibold hover:bg-slate-900 hover:text-white">Add to bag</button>
+                        </div>
+                    </div>
+
+                    <div class="flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-sm">
+                        <div class="relative">
+                            <img src="images/speaker.jpg" alt="Pocket Speaker" class="h-64 w-full object-cover transition-transform duration-300 hover:scale-105">
+                            <span class="absolute left-2 top-2 rounded-full bg-lime-300 px-2 py-1 text-xs font-bold">New</span>
+                        </div>
+                        <div class="flex flex-1 flex-col p-4">
+                            <p class="text-xs font-semibold uppercase text-slate-500">Audio</p>
+                            <h2 class="mt-1 font-semibold">Pocket Speaker</h2>
+                            <p class="mt-2 text-lg font-bold">₹6,499 <span class="text-sm font-normal text-slate-400 line-through">₹7,999</span></p>
+                            <button type="button" class="mt-auto w-full rounded-full border border-slate-900 py-2 text-sm font-semibold hover:bg-slate-900 hover:text-white">Add to bag</button>
+                        </div>
+                    </div>
+
+                    <div class="flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-sm">
+                        <div class="relative">
+                            <img src="images/lamp.jpg" alt="Halo Table Lamp" class="h-64 w-full object-cover transition-transform duration-300 hover:scale-105">
+                            <span class="absolute left-2 top-2 rounded-full bg-slate-900 px-2 py-1 text-xs font-bold text-white">Pick</span>
+                        </div>
+                        <div class="flex flex-1 flex-col p-4">
+                            <p class="text-xs font-semibold uppercase text-slate-500">Home</p>
+                            <h2 class="mt-1 font-semibold">Halo Table Lamp</h2>
+                            <p class="mt-2 text-lg font-bold">₹12,999</p>
+                            <button type="button" class="mt-auto w-full rounded-full border border-slate-900 py-2 text-sm font-semibold hover:bg-slate-900 hover:text-white">Add to bag</button>
+                        </div>
+                    </div>
+
+                    <div class="flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-sm">
+                        <div class="relative">
+                            <img src="images/sunglasses.jpg" alt="Solstice Sunglasses" class="h-64 w-full object-cover transition-transform duration-300 hover:scale-105">
+                            <span class="absolute left-2 top-2 rounded-full bg-lime-300 px-2 py-1 text-xs font-bold">New</span>
+                        </div>
+                        <div class="flex flex-1 flex-col p-4">
+                            <p class="text-xs font-semibold uppercase text-slate-500">Style</p>
+                            <h2 class="mt-1 font-semibold">Solstice Sunglasses</h2>
+                            <p class="mt-2 text-lg font-bold">₹5,999</p>
+                            <button type="button" class="mt-auto w-full rounded-full border border-slate-900 py-2 text-sm font-semibold hover:bg-slate-900 hover:text-white">Add to bag</button>
+                        </div>
+                    </div>
+
+                    <div class="flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-sm">
+                        <div class="relative">
+                            <img src="images/weekender.jpg" alt="Canvas Weekender" class="h-64 w-full object-cover transition-transform duration-300 hover:scale-105">
+                            <span class="absolute left-2 top-2 rounded-full bg-slate-900 px-2 py-1 text-xs font-bold text-white">Bestseller</span>
+                        </div>
+                        <div class="flex flex-1 flex-col p-4">
+                            <p class="text-xs font-semibold uppercase text-slate-500">Style</p>
+                            <h2 class="mt-1 font-semibold">Canvas Weekender</h2>
+                            <p class="mt-2 text-lg font-bold">₹14,999 <span class="text-sm font-normal text-slate-400 line-through">₹17,999</span></p>
+                            <button type="button" class="mt-auto w-full rounded-full border border-slate-900 py-2 text-sm font-semibold hover:bg-slate-900 hover:text-white">Add to bag</button>
+                        </div>
+                    </div>
+
+                    <div class="flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-sm">
+                        <div class="relative">
+                            <img src="images/mug.jpg" alt="Ridge Stoneware Mug" class="h-64 w-full object-cover transition-transform duration-300 hover:scale-105">
+                            <span class="absolute left-2 top-2 rounded-full bg-lime-300 px-2 py-1 text-xs font-bold">New</span>
+                        </div>
+                        <div class="flex flex-1 flex-col p-4">
+                            <p class="text-xs font-semibold uppercase text-slate-500">Home</p>
+                            <h2 class="mt-1 font-semibold">Ridge Stoneware Mug</h2>
+                            <p class="mt-2 text-lg font-bold">₹2,499</p>
+                            <button type="button" class="mt-auto w-full rounded-full border border-slate-900 py-2 text-sm font-semibold hover:bg-slate-900 hover:text-white">Add to bag</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Right side: cart summary -->
+            <aside id="cart" class="h-fit rounded-xl bg-white p-5 shadow-sm lg:sticky lg:top-20">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-xl font-bold">Shopping bag</h2>
+                    <span class="rounded-full bg-slate-200 px-3 py-1 text-xs font-semibold">3 items</span>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="mb-4 flex gap-3">
+                    <img src="images/headphones.jpg" alt="" class="h-20 w-16 rounded-lg object-cover">
+                    <div class="flex-1">
+                        <h3 class="text-sm font-semibold">Studio Headphones</h3>
+                        <p class="text-xs text-slate-500">Black</p>
+                        <div class="mt-2 flex items-center gap-1">
+                            <button type="button" class="rounded border border-slate-300 px-2">-</button>
+                            <input type="number" value="1" class="w-12 rounded border border-slate-300 px-1 text-center text-sm">
+                            <button type="button" class="rounded border border-slate-300 px-2">+</button>
+                        </div>
+                    </div>
+                    <strong class="text-sm">₹15,999</strong>
+                </div>
+
+                <div class="mb-4 flex gap-3">
+                    <img src="images/watch.jpg" alt="" class="h-20 w-16 rounded-lg object-cover">
+                    <div class="flex-1">
+                        <h3 class="text-sm font-semibold">Meridian Watch</h3>
+                        <p class="text-xs text-slate-500">Silver</p>
+                        <div class="mt-2 flex items-center gap-1">
+                            <button type="button" class="rounded border border-slate-300 px-2">-</button>
+                            <input type="number" value="1" class="w-12 rounded border border-slate-300 px-1 text-center text-sm">
+                            <button type="button" class="rounded border border-slate-300 px-2">+</button>
+                        </div>
+                    </div>
+                    <strong class="text-sm">₹21,499</strong>
+                </div>
+
+                <div class="mb-4 flex gap-3">
+                    <img src="images/sunglasses.jpg" alt="" class="h-20 w-16 rounded-lg object-cover">
+                    <div class="flex-1">
+                        <h3 class="text-sm font-semibold">Solstice Sunglasses</h3>
+                        <p class="text-xs text-slate-500">Smoke</p>
+                        <div class="mt-2 flex items-center gap-1">
+                            <button type="button" class="rounded border border-slate-300 px-2">-</button>
+                            <input type="number" value="1" class="w-12 rounded border border-slate-300 px-1 text-center text-sm">
+                            <button type="button" class="rounded border border-slate-300 px-2">+</button>
+                        </div>
+                    </div>
+                    <strong class="text-sm">₹5,999</strong>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="mb-2 flex justify-between">
+                    <span class="text-slate-600">Subtotal</span>
+                    <strong>₹43,497</strong>
+                </div>
+                <div class="mb-4 flex justify-between">
+                    <span class="text-slate-600">Shipping</span>
+                    <span class="font-semibold text-green-700">FREE</span>
+                </div>
+
+                <div class="mb-4 flex gap-2">
+                    <input type="text" placeholder="Coupon code" class="w-full rounded border border-slate-300 px-3 py-2 text-sm outline-none">
+                    <button type="button" class="rounded border border-slate-900 px-3 text-sm font-semibold">Apply</button>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex items-center justify-between">
+                    <span class="font-bold">Total</span>
+                    <span class="text-2xl font-bold">₹43,497</span>
+                </div>
+
+                <button type="button" class="mt-4 w-full rounded-full bg-slate-900 py-3 text-sm font-bold text-white">
+                    🔒 Checkout
+                </button>
+
+                <p class="mt-3 text-center text-xs text-slate-500">Safe and secure payment</p>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 py-6 text-center text-sm text-white">
+        © 2026 OnlineKart. Made for everyday use.
+    </footer>
+
+</body>
+</html>
